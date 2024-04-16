@@ -3,10 +3,12 @@ package happyprogfrog.hellospring.service;
 import happyprogfrog.hellospring.domain.Member;
 import happyprogfrog.hellospring.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 public class MemberService {
     private final MemberRepository memberRepository;
 
