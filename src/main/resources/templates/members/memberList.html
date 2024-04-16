@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"><!-- thymeleaf 문법을 쓸 수 있다 -->
+<head>
+    <title>회원 목록</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class="container">
+    <h1>회원 목록</h1>
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <td>#</td>
+                <td>이름</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="member : ${members}">
+                <td th:text="${member.id}"></td>
+                <td th:text="${member.name}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div><!-- /container -->
+</body>
+</html>
